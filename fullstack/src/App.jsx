@@ -3,14 +3,30 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Welcome from './Welcome'
 //import './App.css'
+import Skills from './Skills'
+import Home from './Pages/Home'
+import {Route, Routes } from 'react-router-dom'
+import About from './Pages/About'
+import Services from './Pages/Services'
+import Navbar from './components/Navbar'
+import State from './hooks/State'
+import Form from './hooks/Form'
+import Effect from './hooks/Effect'
 
 function App() {
 
   return (
     <>
-     {/* <Welcome name="Virat" country="India"/>*/}
-     <Skills skill={['React','Node','Express','MangoDB']}/>
-      <h1>Hello World</h1>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/services' element={<Services/>}/>
+      <Route path='/state' element={<State/>}/>
+      <Route path='/form' element={<Form/>}/>
+      <Route path='/effect' element={<Effect/>}/>
+    </Routes>
+    
 
     </>
   )
