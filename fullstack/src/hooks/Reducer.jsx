@@ -14,7 +14,7 @@ const counter=(state,action)=>{
             return state
         }
 }
-const likeCount=(state,action)=>{
+const likeCounter=(state,action)=>{
     switch(action.type){
         case 'LIKE':
             return {...state, like : state.like+1}
@@ -26,7 +26,7 @@ const likeCount=(state,action)=>{
 }
 const Reducer = () => {
     const [count,dispatch]=useReducer(counter,initialValue)
-    const [likeCount,dispatch1]=useReducer(likeCount,initialReact)
+    const [likeCount,dispatch1]=useReducer(likeCounter,initialReact)
 
   return (
     <div>
