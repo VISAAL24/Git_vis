@@ -5,5 +5,5 @@ const userSchema=new mongoose.Schema({
     age:Number
 })
 
-const User=mongoose.model('Users',userSchema)
+const User=mongoose.model('users',userSchema)
 export default User

@@ -7,6 +7,7 @@ const Form = () => {
         password:'',
         department:''
     })
+    
     const handleChange=(e)=>{
         const {name,value}=e.target
         setFormData((prev)=>({
