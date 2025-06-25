@@ -4,7 +4,9 @@ import {connectDB} from './config/db.js'
 import mongoose from 'mongoose'
 import User from './model/user.js'
 import Stud from './model/Form.js'
+import dotenv from 'dotenv'
 const app=express()
+dotenv.config()
 
 connectDB()
 app.use(express.json())
@@ -56,7 +58,7 @@ app.put('/put/:id',async(req,res)=>{
         const update=await User.findByIdAndUpdate(req.params.id,req.body)
         res.json(update)
     }
-    catch(error){
+    catch(error)  {
         res.json(error)
     }
 })
